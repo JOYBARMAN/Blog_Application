@@ -3,10 +3,9 @@
 <h1>Post</h1>
 <ul>
 {% for post in object_list %}
-<!-- <br/> -->
 	<li>
 		<a href="{% url 'articale-detail' post.pk %}">{{post.title}}</a> - {{post.author.first_name}} {{post.author.last_name}}<br/>
-		{{post.body}}
+		{{post.body}} - <a href="{% url 'update_post' post.pk %}">(Edit)</a>
 	</li>
 
 
